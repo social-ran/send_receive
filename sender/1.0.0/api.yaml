@@ -214,7 +214,7 @@ actions:
       schema:
         type: string
   - name: smtpsender
-    description: send tcp
+    description: send smtp
     parameters:
       - name: ip
         description: one number
@@ -255,7 +255,7 @@ actions:
       schema:
         type: string
   - name: rtpsender
-    description: send tcp
+    description: send rtp
     parameters:
       - name: ip
         description: one number
