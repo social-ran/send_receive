@@ -24,8 +24,9 @@ class sender(AppBase):
         fp.write('",\n"send_Constant":"')
         fp.write(speed)
         fp.write('",\n"size_Cauchy1":"500",\n"size_Cauchy2":"1"\n}\n}\n')
-        os.system('./tra_docker_make/run.sh')
-        return "tcpsender finished!"
+        a=os.system('./tra_docker_make/run.sh')
+        a=chr(a)
+        return a+"tcpsender finished!"
     async def udpsender(self,ip,speed,start_time="2018-08-11 13:41:11",end_time="2018-08-11 13:41:41",log_path="/var/log/appsimulation/traffic_gen.log"):
         fp = open('/home/config/post_info.json', 'w')
         fp.write('{\n"cmd_info":{\n"cmd":"start"\n},\n"task_info":{\n"log_path":"')
